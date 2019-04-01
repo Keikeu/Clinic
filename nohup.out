@@ -1,0 +1,16 @@
+App running on port 2010.
+App running on port 2010.
+/home/stud2016/6placek/public_html/bazy/projekt/queries.js:199
+      throw error//
+      ^
+
+error: nieprawidłowa składnia wejścia dla integer: "Wybierz . . ."
+    at Connection.parseE (/home/stud2016/6placek/public_html/bazy/projekt/node_modules/pg/lib/connection.js:555:11)
+    at Connection.parseMessage (/home/stud2016/6placek/public_html/bazy/projekt/node_modules/pg/lib/connection.js:380:19)
+    at Socket.<anonymous> (/home/stud2016/6placek/public_html/bazy/projekt/node_modules/pg/lib/connection.js:120:22)
+    at Socket.emit (events.js:159:13)
+    at addChunk (_stream_readable.js:265:12)
+    at readableAddChunk (_stream_readable.js:252:11)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onread (net.js:598:20)
+App running on port 2010.

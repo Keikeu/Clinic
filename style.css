@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background: #f9f9fb !important;
+  font-family: 'Poppins', sans-serif !important;
+}
+
+a, a:hover, a:focus, a:active, a:visited {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+input[type="number"], input[type="tel"], input[type="time"], input[type="date"], table td {
+  font-family: 'Roboto-Mono', monospace;
+}
+
+.header {
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  background: white;
+  padding: 20px 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #4568DC;
+  background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+  background: linear-gradient(to right, #B06AB3, #4568DC);
+  color: #ffffff;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+.header h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.sidenav {
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  width: 16vw;
+  height: 90vh;
+  background: white;
+  padding: 0 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.sidenav__header {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #888888;
+  letter-spacing: 2px;
+  margin: 15px 10px 5px;
+}
+.sidenav__list {
+  list-style-type: none;
+  padding: 20px 0 0;
+}
+.list__item {
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 2px 0;
+}
+.list__item.active {
+  background: #f7f7f9;
+  color: #8a55cc;
+  font-weight: 600;
+}
+.list__item:hover {
+  background: #f7f7f9;
+}
+.list__item i {
+  color: #555555;
+  margin-right: 15px;
+  width: 16px;
+}
+.list__item.active i {
+  color: #8a55cc;
+}
+.sidenav__footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: #666666;
+  letter-spacing: 1px;
+  margin-left: -15px;
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.main {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  margin-left: 16vw;
+  width: 84vw;
+  padding: 10px 30px !important;
+}
+.main h2 {
+  padding: 20px 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.main .search-bar {
+  position: absolute;
+  width: 30%;
+  top: 25px;
+  right: 30px;
+  background-image: url('searchicon.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-left: 35px;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+.main .table {
+  background-color: #ffffff;
+}
+.main i {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.main .table i:last-child {
+  margin: 0;
+}
+.fab {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 50px;
+  padding: 0;
+  background: #7669C9;
+  color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  cursor: pointer;
+  transition-duration: 200ms;
+}
+.fab:hover {
+  background: #6558b8;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.statistics {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+.statistics__item {
+  border: 1px solid #dfdfff;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+.statistics__item__value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #7A69C8;
+}
+
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.5);
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+.overlay form, .overlay > div {
+  position: relative;
+  background-color: #ffffff;
+  width: 65%;
+  margin: 70px auto;
+  padding: 30px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.overlay form i, .overlay > div i {
+  font-size: 1.6rem;
+  float: right;
+  padding: 10px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.overlay form h3, .overlay > div h3 {
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+#tab-2 {
+  display: none;
+}
+.toothing-details {
+  margin: 20px 0;
+  text-align: center;
+}
+.tooth-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.tooth {
+  background-color: #ffffff;
+  border: 1px solid #ababab;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+.tooth:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+.tooth.sick1 {
+  background-color: #f2a33c;
+}
+.tooth.sick2 {
+  background-color: #f16c3b;
+}
+.tooth.sick3 {
+  background-color: #c92820;
+}
+.tooth-name {
+  text-align: center;
+}
+.tooth-details {
+  display: none;
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt 2 - Karolina Placek</title>
+    <link rel="icon" href="icon.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Klinika dentystyczna</h1>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="sidenav">
+          <ul class="sidenav__list">
+            <a href="./index.html">
+              <li class="list__item active" data-value="panel">
+                <i class="fas fa-chart-line"></i>
+                Panel główny
+              </li>
+            </a>
+            <a href="./wizyty.html">
+              <li class="list__item" data-value="wizyty">
+                <i class="fas fa-calendar-alt"></i>
+                Wizyty
+              </li>
+            </a>
+            <a href="./pracownicy.html">
+              <li class="list__item" data-value="pracownicy">
+                <i class="fas fa-user-tie"></i>
+                Pracownicy
+              </li>
+            </a>
+            <a href="./pacjenci.html">
+              <li class="list__item" data-value="pacjenci">
+                <i class="fas fa-user"></i>
+                Pacjenci
+              </li>
+            </a>
+            <a href="./gabinety.html">
+              <li class="list__item" data-value="gabinety">
+                <i class="fas fa-chair"></i>
+                Gabinety
+              </li>
+            </a>
+            <a href="./uslugi.html">
+              <li class="list__item" data-value="uslugi">
+                <i class="fas fa-syringe"></i>
+                Usługi
+              </li>
+            </a>
+            <a href="./kategorie.html">
+              <li class="list__item" data-value="kategorie">
+                <i class="fas fa-th-large"></i>
+                Kategorie
+              </li>
+            </a>
+          </ul>
+          <h3 class="sidenav__footer">Karolina Placek</h3>
+        </div>
+
+        <main class="main col-10">
+          <h2>Statystyki miesiąca</h2>
+          <div class="statistics">
+            <div class="statistics__item">
+              <h6>Liczba wizyt </h6> <span class="statistics__item__value" id="wizytyMiesiac"></span>
+            </div>
+            <div class="statistics__item">
+              <h6>Zarobione pieniądze </h6> <span class="statistics__item__value" id="kosztMiesiac"></span>
+            </div>
+            <div class="statistics__item">
+              <h6>Pracownik miesiąca </h6> <span class="statistics__item__value" id="pracownikMiesiac"></span>
+            </div>
+          </div>
+
+          <div class="schedule-today">
+            <h2>Dzisiejszy plan wizyt</h2>
+            <table class="table table-hover table-fit table-bordered">
+              <thead>
+                <tr>
+                  <th style="width: 10%"> Godzina </th>
+                  <th style="width: 14%"> Usługa </th>
+                  <th style="width: 14%"> Pacjent </th>
+                  <th style="width: 14%"> Pracownik </th>
+                  <th style="width: 4%"> Gabinet </th>
+                  <th style="width: 4%"> Koszt </th>
+                </tr>
+              </thead>
+              <tbody id="tabela-wizyty-dzisiaj">
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="glowna.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>

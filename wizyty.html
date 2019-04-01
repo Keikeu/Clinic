@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <title>Projekt 2 - Karolina Placek</title>
+    <link rel="icon" href="icon.jpg">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <header class="header">
+      <h1>Klinika dentystyczna</h1>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="sidenav">
+          <ul class="sidenav__list">
+            <a href="./index.html">
+              <li class="list__item" data-value="panel">
+                <i class="fas fa-chart-line"></i>
+                Panel główny
+              </li>
+            </a>
+            <a href="./wizyty.html">
+              <li class="list__item active" data-value="wizyty">
+                <i class="fas fa-calendar-alt"></i>
+                Wizyty
+              </li>
+            </a>
+            <a href="./pracownicy.html">
+              <li class="list__item" data-value="pracownicy">
+                <i class="fas fa-user-tie"></i>
+                Pracownicy
+              </li>
+            </a>
+            <a href="./pacjenci.html">
+              <li class="list__item" data-value="pacjenci">
+                <i class="fas fa-user"></i>
+                Pacjenci
+              </li>
+            </a>
+            <a href="./gabinety.html">
+              <li class="list__item" data-value="gabinety">
+                <i class="fas fa-chair"></i>
+                Gabinety
+              </li>
+            </a>
+            <a href="./uslugi.html">
+              <li class="list__item" data-value="uslugi">
+                <i class="fas fa-syringe"></i>
+                Usługi
+              </li>
+            </a>
+            <a href="./kategorie.html">
+              <li class="list__item" data-value="kategorie">
+                <i class="fas fa-th-large"></i>
+                Kategorie
+              </li>
+            </a>
+          </ul>
+          <h3 class="sidenav__footer">Karolina Placek</h3>
+        </div>
+
+        <main class="main col-10">
+          <h2>Wizyty</h2>
+          <input type="text" onkeyup="onSearch()" class="form-control search-bar" placeholder="Szukaj . . ."/>
+          <table class="table table-hover table-fit table-bordered">
+            <thead>
+              <tr>
+                <th style="width: 10%"> Data </th>
+                <th style="width: 14%"> Godzina </th>
+                <th style="width: 26%"> Usługa </th>
+                <th style="width: 20%"> Pacjent </th>
+                <th style="width: 20%"> Pracownik </th>
+                <th style="width: 6%"> Gabinet </th>
+              </tr>
+            </thead>
+            <tbody id="tabela-wizyty">
+            </tbody>
+          </table>
+          <div class="fab" onclick="onOpenForm()">+</div>
+        </main>
+      </div>
+    </div>
+
+    <!-- =========================================== FORMS ======================================================== -->
+    <div class="overlay" id="wizyty-overlay">
+      <form id="wizyty-form" class="needs-validation" onsubmit="return false">
+        <i class="fas fa-times" onclick="onCloseForm()"></i>
+        <h3>Formularz</h3>
+        <div class="form-group">
+          <label>Pacjent</label>
+          <select class="custom-select" name="pacjent" id="select-pacjent" required>
+            <option selected disabled>Wybierz . . .</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Pracownik</label>
+          <select class="custom-select" name="pracownik" id="select-pracownik" required>
+            <option selected disabled>Wybierz . . .</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Gabinet</label>
+          <select class="custom-select" name="gabinet" id="select-gabinet" required>
+            <option selected disabled>Wybierz . . .</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Usługa</label>
+          <select class="custom-select" name="usluga" id="select-usluga" required>
+            <option selected disabled>Wybierz . . .</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Data</label>
+          <input class="form-control" name="data" type="date" required/>
+        </div>
+        <div class="form-group">
+          <label>Godzina rozpoczęcia</label>
+          <input class="form-control" name="godzina_start" type="time" step="900" min="08:00" max="20:00" required/>
+          <small class="form-text text-muted">Od 8:00 do 20:00 co 15 minut</small>
+        </div>
+        <div class="form-group">
+          <label>Godzina zakończenia</label>
+          <input class="form-control" name="godzina_stop" type="time" step="900" min="08:00" max="20:00" required/>
+          <small class="form-text text-muted">Od 8:00 do 20:00 co 15 minut</small>
+        </div>
+        <button type="submit" onclick="dodajWizyte()" class="btn btn-info btn-block mt-5">Zapisz</button>
+      </form>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="wizyty.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
